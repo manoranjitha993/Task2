@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TaskManagerModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ParentTaskTable">
+          <Key>
+            <PropertyRef Name="Parent_ID" />
+          </Key>
+          <Property Name="Parent_ID" Type="int" Nullable="false" />
+          <Property Name="Parent_Task" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="ProjectTable">
+          <Key>
+            <PropertyRef Name="Project_ID" />
+          </Key>
+          <Property Name="Project_ID" Type="int" Nullable="false" />
+          <Property Name="Project" Type="nvarchar" MaxLength="20" />
+          <Property Name="Start_Date" Type="datetime" />
+          <Property Name="End_Date" Type="datetime" />
+          <Property Name="Priority" Type="int" />
+        </EntityType>
+        <EntityType Name="TaskTable">
+          <Key>
+            <PropertyRef Name="Task_ID" />
+          </Key>
+          <Property Name="Task_ID" Type="int" Nullable="false" />
+          <Property Name="Parent_ID" Type="int" Nullable="false" />
+          <Property Name="Project_ID" Type="int" Nullable="false" />
+          <Property Name="Task" Type="nvarchar" MaxLength="20" />
+          <Property Name="Start_Date" Type="datetime" />
+          <Property Name="End_Date" Type="datetime" />
+          <Property Name="Priority" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="UsersTable">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="int" Nullable="false" />
+          <Property Name="First Name" Type="nvarchar" MaxLength="20" />
+          <Property Name="Last Name" Type="nvarchar" MaxLength="20" />
+          <Property Name="Employee_ID" Type="int" Nullable="false" />
+          <Property Name="Project_ID" Type="int" Nullable="false" />
+          <Property Name="Task_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_TaskTable_ParentTaskTable_Parent_ID">
+          <End Role="ParentTaskTable" Type="Self.ParentTaskTable" Multiplicity="1" />
+          <End Role="TaskTable" Type="Self.TaskTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParentTaskTable">
+              <PropertyRef Name="Parent_ID" />
+            </Principal>
+            <Dependent Role="TaskTable">
+              <PropertyRef Name="Parent_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaskTable_ProjectTable_Project_ID">
+          <End Role="ProjectTable" Type="Self.ProjectTable" Multiplicity="1" />
+          <End Role="TaskTable" Type="Self.TaskTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectTable">
+              <PropertyRef Name="Project_ID" />
+            </Principal>
+            <Dependent Role="TaskTable">
+              <PropertyRef Name="Project_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersTable_ProjectTable_Project_ID">
+          <End Role="ProjectTable" Type="Self.ProjectTable" Multiplicity="1" />
+          <End Role="UsersTable" Type="Self.UsersTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectTable">
+              <PropertyRef Name="Project_ID" />
+            </Principal>
+            <Dependent Role="UsersTable">
+              <PropertyRef Name="Project_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersTable_TaskTable_Task_ID">
+          <End Role="TaskTable" Type="Self.TaskTable" Multiplicity="1" />
+          <End Role="UsersTable" Type="Self.UsersTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskTable">
+              <PropertyRef Name="Task_ID" />
+            </Principal>
+            <Dependent Role="UsersTable">
+              <PropertyRef Name="Task_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="TaskManagerModelStoreContainer">
+          <EntitySet Name="ParentTaskTable" EntityType="Self.ParentTaskTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProjectTable" EntityType="Self.ProjectTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TaskTable" EntityType="Self.TaskTable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UsersTable" EntityType="Self.UsersTable" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TaskTable_ParentTaskTable_Parent_ID" Association="Self.FK_TaskTable_ParentTaskTable_Parent_ID">
+            <End Role="ParentTaskTable" EntitySet="ParentTaskTable" />
+            <End Role="TaskTable" EntitySet="TaskTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaskTable_ProjectTable_Project_ID" Association="Self.FK_TaskTable_ProjectTable_Project_ID">
+            <End Role="ProjectTable" EntitySet="ProjectTable" />
+            <End Role="TaskTable" EntitySet="TaskTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersTable_ProjectTable_Project_ID" Association="Self.FK_UsersTable_ProjectTable_Project_ID">
+            <End Role="ProjectTable" EntitySet="ProjectTable" />
+            <End Role="UsersTable" EntitySet="UsersTable" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersTable_TaskTable_Task_ID" Association="Self.FK_UsersTable_TaskTable_Task_ID">
+            <End Role="TaskTable" EntitySet="TaskTable" />
+            <End Role="UsersTable" EntitySet="UsersTable" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TaskManagerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TaskManagerEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ParentTaskTables" EntityType="TaskManagerModel.ParentTaskTable" />
+          <EntitySet Name="ProjectTables" EntityType="TaskManagerModel.ProjectTable" />
+          <EntitySet Name="TaskTables" EntityType="TaskManagerModel.TaskTable" />
+          <EntitySet Name="UsersTables" EntityType="TaskManagerModel.UsersTable" />
+          <AssociationSet Name="FK_TaskTable_ParentTaskTable_Parent_ID" Association="TaskManagerModel.FK_TaskTable_ParentTaskTable_Parent_ID">
+            <End Role="ParentTaskTable" EntitySet="ParentTaskTables" />
+            <End Role="TaskTable" EntitySet="TaskTables" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TaskTable_ProjectTable_Project_ID" Association="TaskManagerModel.FK_TaskTable_ProjectTable_Project_ID">
+            <End Role="ProjectTable" EntitySet="ProjectTables" />
+            <End Role="TaskTable" EntitySet="TaskTables" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersTable_ProjectTable_Project_ID" Association="TaskManagerModel.FK_UsersTable_ProjectTable_Project_ID">
+            <End Role="ProjectTable" EntitySet="ProjectTables" />
+            <End Role="UsersTable" EntitySet="UsersTables" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsersTable_TaskTable_Task_ID" Association="TaskManagerModel.FK_UsersTable_TaskTable_Task_ID">
+            <End Role="TaskTable" EntitySet="TaskTables" />
+            <End Role="UsersTable" EntitySet="UsersTables" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ParentTaskTable">
+          <Key>
+            <PropertyRef Name="Parent_ID" />
+          </Key>
+          <Property Name="Parent_ID" Type="Int32" Nullable="false" />
+          <Property Name="Parent_Task" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TaskTables" Relationship="TaskManagerModel.FK_TaskTable_ParentTaskTable_Parent_ID" FromRole="ParentTaskTable" ToRole="TaskTable" />
+        </EntityType>
+        <EntityType Name="ProjectTable">
+          <Key>
+            <PropertyRef Name="Project_ID" />
+          </Key>
+          <Property Name="Project_ID" Type="Int32" Nullable="false" />
+          <Property Name="Project" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Start_Date" Type="DateTime" Precision="3" />
+          <Property Name="End_Date" Type="DateTime" Precision="3" />
+          <Property Name="Priority" Type="Int32" />
+          <NavigationProperty Name="TaskTables" Relationship="TaskManagerModel.FK_TaskTable_ProjectTable_Project_ID" FromRole="ProjectTable" ToRole="TaskTable" />
+          <NavigationProperty Name="UsersTables" Relationship="TaskManagerModel.FK_UsersTable_ProjectTable_Project_ID" FromRole="ProjectTable" ToRole="UsersTable" />
+        </EntityType>
+        <EntityType Name="TaskTable">
+          <Key>
+            <PropertyRef Name="Task_ID" />
+          </Key>
+          <Property Name="Task_ID" Type="Int32" Nullable="false" />
+          <Property Name="Parent_ID" Type="Int32" Nullable="false" />
+          <Property Name="Project_ID" Type="Int32" Nullable="false" />
+          <Property Name="Task" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Start_Date" Type="DateTime" Precision="3" />
+          <Property Name="End_Date" Type="DateTime" Precision="3" />
+          <Property Name="Priority" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ParentTaskTable" Relationship="TaskManagerModel.FK_TaskTable_ParentTaskTable_Parent_ID" FromRole="TaskTable" ToRole="ParentTaskTable" />
+          <NavigationProperty Name="ProjectTable" Relationship="TaskManagerModel.FK_TaskTable_ProjectTable_Project_ID" FromRole="TaskTable" ToRole="ProjectTable" />
+          <NavigationProperty Name="UsersTables" Relationship="TaskManagerModel.FK_UsersTable_TaskTable_Task_ID" FromRole="TaskTable" ToRole="UsersTable" />
+        </EntityType>
+        <EntityType Name="UsersTable">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="Int32" Nullable="false" />
+          <Property Name="First_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Employee_ID" Type="Int32" Nullable="false" />
+          <Property Name="Project_ID" Type="Int32" Nullable="false" />
+          <Property Name="Task_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ProjectTable" Relationship="TaskManagerModel.FK_UsersTable_ProjectTable_Project_ID" FromRole="UsersTable" ToRole="ProjectTable" />
+          <NavigationProperty Name="TaskTable" Relationship="TaskManagerModel.FK_UsersTable_TaskTable_Task_ID" FromRole="UsersTable" ToRole="TaskTable" />
+        </EntityType>
+        <Association Name="FK_TaskTable_ParentTaskTable_Parent_ID">
+          <End Type="TaskManagerModel.ParentTaskTable" Role="ParentTaskTable" Multiplicity="1" />
+          <End Type="TaskManagerModel.TaskTable" Role="TaskTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ParentTaskTable">
+              <PropertyRef Name="Parent_ID" />
+            </Principal>
+            <Dependent Role="TaskTable">
+              <PropertyRef Name="Parent_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TaskTable_ProjectTable_Project_ID">
+          <End Type="TaskManagerModel.ProjectTable" Role="ProjectTable" Multiplicity="1" />
+          <End Type="TaskManagerModel.TaskTable" Role="TaskTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectTable">
+              <PropertyRef Name="Project_ID" />
+            </Principal>
+            <Dependent Role="TaskTable">
+              <PropertyRef Name="Project_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersTable_ProjectTable_Project_ID">
+          <End Type="TaskManagerModel.ProjectTable" Role="ProjectTable" Multiplicity="1" />
+          <End Type="TaskManagerModel.UsersTable" Role="UsersTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectTable">
+              <PropertyRef Name="Project_ID" />
+            </Principal>
+            <Dependent Role="UsersTable">
+              <PropertyRef Name="Project_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsersTable_TaskTable_Task_ID">
+          <End Type="TaskManagerModel.TaskTable" Role="TaskTable" Multiplicity="1" />
+          <End Type="TaskManagerModel.UsersTable" Role="UsersTable" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TaskTable">
+              <PropertyRef Name="Task_ID" />
+            </Principal>
+            <Dependent Role="UsersTable">
+              <PropertyRef Name="Task_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TaskManagerModelStoreContainer" CdmEntityContainer="TaskManagerEntities">
+          <EntitySetMapping Name="ParentTaskTables">
+            <EntityTypeMapping TypeName="TaskManagerModel.ParentTaskTable">
+              <MappingFragment StoreEntitySet="ParentTaskTable">
+                <ScalarProperty Name="Parent_Task" ColumnName="Parent_Task" />
+                <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectTables">
+            <EntityTypeMapping TypeName="TaskManagerModel.ProjectTable">
+              <MappingFragment StoreEntitySet="ProjectTable">
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+                <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+                <ScalarProperty Name="Project" ColumnName="Project" />
+                <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskTables">
+            <EntityTypeMapping TypeName="TaskManagerModel.TaskTable">
+              <MappingFragment StoreEntitySet="TaskTable">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="End_Date" ColumnName="End_Date" />
+                <ScalarProperty Name="Start_Date" ColumnName="Start_Date" />
+                <ScalarProperty Name="Task" ColumnName="Task" />
+                <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+                <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+                <ScalarProperty Name="Task_ID" ColumnName="Task_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersTables">
+            <EntityTypeMapping TypeName="TaskManagerModel.UsersTable">
+              <MappingFragment StoreEntitySet="UsersTable">
+                <ScalarProperty Name="Task_ID" ColumnName="Task_ID" />
+                <ScalarProperty Name="Project_ID" ColumnName="Project_ID" />
+                <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+                <ScalarProperty Name="First_Name" ColumnName="First Name" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

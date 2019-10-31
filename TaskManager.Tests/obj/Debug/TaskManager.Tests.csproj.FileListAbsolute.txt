@@ -1,0 +1,98 @@
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csc.exe
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csc.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csc.rsp
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csi.exe
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csi.rsp
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.AppContext.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.IO.FileSystem.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\vbc.exe
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\vbc.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\vbc.rsp
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.Tests.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.Tests.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.Tests.pdb
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Cors.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.Cors.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.pdb
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.dll.config
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.Cors.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\obj\Debug\TaskManager.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\obj\Debug\TaskManager.Tests.dll
+C:\Users\Administrator\Documents\Visual Studio 2017\Projects\TaskManager\TaskManager.Tests\obj\Debug\TaskManager.Tests.pdb
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csc.exe
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csc.exe.config
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csc.rsp
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csi.exe
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\csi.rsp
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.AppContext.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.Diagnostics.StackTrace.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.IO.FileSystem.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.IO.FileSystem.Primitives.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\vbc.exe
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\vbc.exe.config
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\vbc.rsp
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\VBCSCompiler.exe
+C:\TaskManager\TaskManager.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.Tests.dll.config
+C:\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.Tests.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.Tests.pdb
+C:\TaskManager\TaskManager.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Cors.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.Cors.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\EntityFramework.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.pdb
+C:\TaskManager\TaskManager.Tests\bin\Debug\TaskManager.dll.config
+C:\TaskManager\TaskManager.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\TaskManager\TaskManager.Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.xml
+C:\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.Cors.xml
+C:\TaskManager\TaskManager.Tests\bin\Debug\EntityFramework.xml
+C:\TaskManager\TaskManager.Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\TaskManager\TaskManager.Tests\obj\Debug\TaskManager.Tests.csprojResolveAssemblyReference.cache
+C:\TaskManager\TaskManager.Tests\obj\Debug\TaskManager.Tests.dll
+C:\TaskManager\TaskManager.Tests\obj\Debug\TaskManager.Tests.pdb
